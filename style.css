@@ -46,13 +46,7 @@ body {
   height: 100%;
 }
 
-#hello {
-    float: left;
-  width: 100%;
-  height: 100%;
-    padding: 80px; 
 
-}
 
 /* .row {
     font-size: large;
@@ -75,33 +69,61 @@ section {
 
 }
 
+@media (min-width: 160vh) {
+    #hello {
+      float: left;
+    width: 100%;
+    height: 100%;
+      padding: 80px; 
+
+  }
+}
+
+
+@media (max-width: 135vh) {
+  #hello {
+    float: left;
+  width: 100%;
+  height: 100%;
+    padding: 20px; 
+
+}
+}
+
+
 
 /* anything over X px: */
-     @media (min-width: 140vh) {
-        #hello {
-            float: left;
-          width: 100%;
-          height: 100%;
-            padding: 80px; 
-        
-        }
-     
-      #hello2 {
-        display: none;
-      
-      }
-      .under {
-        position: relative;
-        top: 300px;
-        right: 140px;
-     }
-    }
     @media (min-width: 140vh) {
+      
+ 
+  #hello2 {
+    display: none;
+  
+  }
+  .under {
+    position: relative;
+    top: 300px;
+    right: 140px;
+ }
         .hidden-mobile {
             font-size: 12px;
           }
         }
     @media (max-width: 140vh) {
+
+      #hello3 {
+        display: none;
+    }
+    .wrapper .sidebar{
+        background: rgb(255, 255, 255);
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 0%;
+        height: 100%;
+        padding: 0px 0;
+        transition: all 0.5s ease;
+    }
         .hidden-mobile {
             font-size: 10px;
             }
@@ -112,7 +134,7 @@ section {
                 }
             } */
   
-      @media (min-width: 120vh) {
+      @media (min-width: 125vh) {
           
       .hidden-mobile3 {
           display: none;
@@ -129,27 +151,15 @@ section {
         #gone {
           display: none;
         }
+        #titleD {
+          display: none;
+        }
     }
 
     /* below X px: */
 
-    @media (max-width: 140vh)
-     {
-        #hello3 {
-            display: none;
-        }
-        .wrapper .sidebar{
-            background: rgb(255, 255, 255);
-            position: fixed;
-            top: 0;
-            right: 0;
-            width: 0%;
-            height: 100%;
-            padding: 0px 0;
-            transition: all 0.5s ease;
-        }
-    }
-    @media (max-width: 120vh) {
+   
+    @media (max-width: 125vh) {
         .hidden-mobile {
             /* font-size: 20px; */
             display: none;
@@ -187,6 +197,13 @@ section {
         padding-top: 20px;  padding-left: 10px; padding-right: 10px; 
         
       }
+      #titleC {
+        writing-mode: vertical-rl;
+        text-orientation: sideways-right;
+        /* padding-top: 20px;  padding-left: 10px; padding-right: 10px;  */
+        
+      }
+      
     #hide {
       display: none;
     }
@@ -218,6 +235,18 @@ section {
             text-orientation:upright;
             padding-top: 5px; padding-left: 20px; 
           }
+          #titleC {
+            writing-mode: horizontal-tb;
+            text-orientation:upright;
+    
+              display: none;
+          
+            /* padding-top: 20px;  padding-left: 10px; padding-right: 10px;  */
+            
+          }
+          li {
+            display: inline-block;
+          }
           #hide {
             display:contents;
           }
@@ -227,12 +256,12 @@ section {
             top: 0;
             right: 0;
             width: 100%;
-            height: 10%;
+            height: 13%;
             padding: 20px 0;
             transition: all 0.5s ease;
         }
         .canvas {
-            padding-top: 10%;
+            padding-top: 13%;
         }
         .under {
             position: relative;

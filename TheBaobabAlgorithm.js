@@ -11,13 +11,28 @@ function setup() {
 
   
   resetSketch();
+ 
 }
 
-function windowResized() {
+// function windowResized() {
+//   valaueue = 0;
+//   loop();
+//   resetSketch();
+// }
+
+function touched() {
   valaueue = 0;
   loop();
+  
+  // clearTimeout(drawTimeout);
+  reset = true;
+  noiseSeedNumber = random(100);
+  noiseSeed(noiseSeedNumber);
+  // alert(noiseSeedNumber);
   resetSketch();
 }
+
+
 
 function resetSketch() {
   loop();
@@ -65,6 +80,7 @@ function resetSketch() {
 
   var mycanvas = createCanvas(ww, ww);
   mycanvas.parent('canvas');
+  mycanvas.mouseClicked(touched);
   backgroundColor();
 
   
