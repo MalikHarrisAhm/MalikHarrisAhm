@@ -5,7 +5,7 @@ resetNow = false;
 function setup() {
   valaueue = 0;
   reset = false;
-  pixelDensity(1);
+  pixelDensity(4);
   strokeWeight(1);
   frameRate(60);
 
@@ -40,20 +40,22 @@ function resetSketch() {
   //   num = 4000*(height/500);
   // } else {
     num = 10000;
+    // pixelDensity(5);
   // }
 
   numSTREAK = 1000;
   if (width <= height) {
-    if (windowWidth < 1400) { //IF THIS WINDOW WIDTH OCCURS REARRANGE THE CSS GRID
+    if (windowWidth <= windowHeight) { //IF THIS WINDOW WIDTH OCCURS REARRANGE THE CSS GRID
       ww = windowWidth;
-    } else if (windowWidth < 1801) { //IF THIS WINDOW WIDTH OCCURS REARRANGE THE CSS GRID
+    } else if (windowWidth <= height/5*6) { //IF THIS WINDOW WIDTH OCCURS REARRANGE THE CSS GRID
       ww = windowWidth*0.9;
-    } else if (windowWidth < 2000) { //IF THIS WINDOW WIDTH OCCURS REARRANGE THE CSS GRID
-      ww = windowHeight;
     } else {
       ww = windowHeight;
     }
   }
+
+
+  
   // alert(windowWidth)
   particles = [];
   particleSTREAK = [];
@@ -106,7 +108,8 @@ function drawOutput(num, particles, colorCode) {
   for(let i = 0; i < num; i ++) {
     valaueue++
     // if (colorCode[0] == 0) {
-      strokeWeight(2);
+      strokeWeight(1);
+      // pixelDensity(2);
     // } else {
     //   strokeWeight(1);
 
