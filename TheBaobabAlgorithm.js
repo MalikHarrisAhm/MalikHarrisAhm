@@ -182,9 +182,9 @@ function drawOutput(num, particles, colorCode) {
           p.x += cos(a2-HALF_PI);
           p.y += sin(a2-HALF_PI);
          
-          ellipse(p.x, p.y, density, density);
+          // ellipse(p.x, p.y, 1, 1);
       
-          // point(p.x, p.y);
+          point(p.x, p.y);
         }
       }
    
@@ -206,8 +206,8 @@ function drawOutput(num, particles, colorCode) {
     }
 
   
-    ellipse(p.x, p.y, density, density);
-  
+    // ellipse(p.x, p.y, 1, 1);
+    point(p.x, p.y);
   }
  
     
