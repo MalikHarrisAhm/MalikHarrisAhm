@@ -5,8 +5,7 @@ resetNow = false;
 function setup() {
   valaueue = 0;
   reset = false;
-  pixelDensity(4);
-  strokeWeight(1);
+  density = 0.2;
   frameRate(60);
 
   
@@ -54,7 +53,7 @@ function resetSketch() {
   // if (composition == "DISCOVERY") {
   //   num = 4000*(height/500);
   // } else {
-    num = 10000;
+    
     // pixelDensity(5);
   // }
 
@@ -68,6 +67,10 @@ function resetSketch() {
       ww = windowHeight;
     }
   }
+
+
+  num = 10000;
+  pixelDensity(4);
 
 
   
@@ -124,7 +127,7 @@ function drawOutput(num, particles, colorCode) {
   for(let i = 0; i < num; i ++) {
     valaueue++
     // if (colorCode[0] == 0) {
-      strokeWeight(1);
+      // strokeWeight(1);
       // pixelDensity(2);
     // } else {
     //   strokeWeight(1);
@@ -132,6 +135,7 @@ function drawOutput(num, particles, colorCode) {
     //   // pixelDensity(4);
     // }
     colorGenerator(colorCode, 100);
+    fill(0, 100);
     p = particles[i];
     n = noise(p.x * noiseScale, p.y * noiseScale);
 
@@ -158,6 +162,7 @@ function drawOutput(num, particles, colorCode) {
             p.y += tan(PI);
           } else {
             colorGenerator(colorCode, 5);
+            fill(0, 5);
             p.x += sin(a*2);
             p.y += tan(PI);
           }
@@ -172,10 +177,13 @@ function drawOutput(num, particles, colorCode) {
             // point(p.x, p.y);
           } 
         } else {
-          stroke(0, 100);
+          // stroke(0, 100);
           p.add(curl(p.x/noiseScale, p.y/noiseScale));
           p.x += cos(a2-HALF_PI);
           p.y += sin(a2-HALF_PI);
+         
+          ellipse(p.x, p.y, density, density);
+      
           // point(p.x, p.y);
         }
       }
@@ -186,15 +194,20 @@ function drawOutput(num, particles, colorCode) {
           p.y += sin(a);
         } else {
           colorGenerator(colorCode, 100);
+          fill(0, 100);
           p.x += cos(a);
           p.y += sin(a);
         }
     } else if (composition == "DECAY") {
       colorGenerator(colorCode, 5);
+      fill(0, 5);
         p.x += sin(a*2);
         p.y += tan(a);
     }
-    point(p.x, p.y);
+
+  
+    ellipse(p.x, p.y, density, density);
+  
   }
  
     
