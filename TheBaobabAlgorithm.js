@@ -1,5 +1,4 @@
 // TheBaobab Algorithm, by Malik Harris Ahmed © 2022
-
 function setup() {
   valaueue = 0;
   reset = false;
