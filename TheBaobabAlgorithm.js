@@ -1,4 +1,3 @@
-resetNow = false;
 function setup() {
   valaueue = 0;
   reset = false;
