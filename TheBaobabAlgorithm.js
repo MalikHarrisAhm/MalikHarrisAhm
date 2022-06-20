@@ -1,4 +1,4 @@
-// TheBaobab Algorithm, by Malik Harris Ahmed © 2022
+// TheBaobab Algorithm, by Malik Harris Ahmed © 2022 
 function setup() {
   compNum = 1
   valaueue = 0;
