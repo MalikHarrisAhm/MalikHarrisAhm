@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />  
+    <title>The Baobab</title>
+  
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"> 
+    <link rel="stylesheet" type="text/css" href="abstract.css" />
+     
+    <script>
+      // Generates a random hash and token id each time you reload, in the following format
+      //let tokenData = {"hash":"0xd9134c11cd5ed9798ea0811364d63bd850c69c5d13383c9983ade39847e9ea86","tokenId":"99000000"};
+      
+      function genTokenData(projectNum)
+      {
+          let data = {};
+          let hash = "0x";
+          for (var i = 0; i < 64; i++)
+          {
+              hash += Math.floor(Math.random() * 16).toString(16);
+          }
+          data.hash = hash;
+          data.tokenId = (projectNum * 1000000 + Math.floor(Math.random() * 1000)).toString();
+          return data;
+      }
+      let tokenData = genTokenData(99);
+
+    
+    </script>
+    <script src="three.min.js"></script>
+    <script src="p5.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+  </head>
+  <body>
+    <div class="wrapper hidden-mobile3">
+        
+      <div class="sidebar">
+        <a style="font-size: 25px; font-weight:900; padding-left:  20px; text-decoration: none; text-orientation: sideways-right; color: black "href="index.html" id="titleB">THE BAOBAB</a> 
+          <a style="font-size: 12px;  font-weight:300;    padding-left: 10px; color: black" href="index.html" id="titleD">ABSTRACT</a>   
+            <a style="font-size: 10px; font-weight:100; text-decoration: none; color: black"  href="#"id="titleD"><del>INTRODUCTION</del></a>     
+            <a style="font-size: 10px; font-weight:100; text-decoration: none; color: black"  href="#"id="titleD"><del>METHODS</del></a>     
+            <a style="font-size: 10px; font-weight:100;  color: black" href="#"id="titleD"><del>RESULTS</del></a>     
+            <a style="font-size: 12px; font-weight:300;  color: black"  href="abstract.html"id="titleD">DISCUSSION</del></a>          
+            <a style="font-size: 10px;font-weight:100; text-decoration: none;color: black"  href="#"id="titleD"><del>VIDEO ESSAY</del></a> 
+            <a style="font-size: 12px;font-weight:900; text-decoration: underline; color: black" id="titleD"href="artist.html" >THE ARTIST</a>      
+
+  </div>
+</div>
+     <!-- Portfolio Grid-->
+     <section class="page-section" id="portfolio" >
+        <div class="" style=>
+            <div class="text-left" >
+                <h3 class="" style="font-size: 14px; font-weight:500; padding-bottom: 20px; padding-right: 40px; padding-left: 40px; text-transform: uppercase;" id="topPadding">Malik Ahmed is a generative artist and healthcare technology expert from London, England. Previously, Malik worked at The Royal Marsden Hospital - the world’s leading cancer research hospital, in Chelsea, London, after graduating Pharmacy School in 2021. As a self-taught programmer of 3.5 years, his Master’s thesis was on a  drug informatics AI he wrote and open-sourced, called OpenPIL. The AI has been featured on the front pages of Hacker News, and won the prestigious Making A Difference Award 2021 from the University of Manchester. He is currently an AI advisor to a Y Combinator drug informatics startup.</h3>
+                <h3 class="" style="font-size: 14px; font-weight:500; padding-bottom: 20px; padding-right: 40px; padding-left: 40px; text-transform: uppercase;" >In April 2022, Malik launched his first commercial health technology startup, Dosewolf, a beautifully designed medication tracker app, built over three years. The iOS app was quickly noticed by Apple and on May 9th 2022, Malik was invited to Apple Headquarters in Mayfair, London by the App Store Editorial Team to discuss a feature. It has since been featured on the App Store in the U.K. under New and Trending, and is also set to be featured on the main ‘Today’ page in July-August this year for South Asian Heritage Month.</h3>
+                <h3 class="" style="font-size: 14px; font-weight:500; padding-bottom: 20px; padding-right: 40px; padding-left: 40px; text-transform: uppercase;" >Currently, Malik is undertaking an independently organised research project in Madagascar, Africa, for his non-profit, OpenPIL, to explore the potential for healthcare technology in developing countries. It was on this journey that he saw the infamous Baobab trees, and was inspired to create his first public generative art collection, The Baobab.</h3>
+           
+            </div>
+        </div>
+    </section>
+
+  </body>
+</html>

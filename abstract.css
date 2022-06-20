@@ -8,3 +8,19 @@
   padding: 20px 0;
   transition: all 0.5s ease;
 }
+#topPadding {
+  padding-top: 10%;
+}
+
+@media (max-width: 133vh) {
+  #topPadding {
+    padding-top: 20%;
+  }
+}
+
+
+@media (max-width: 100vh) {
+  #topPadding {
+    padding-top: 20%;
+  }
+}
