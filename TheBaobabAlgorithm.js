@@ -1,3 +1,5 @@
+// TheBaobab Algorithm, by Malik Harris Ahmed ©
+
 function setup() {
   valaueue = 0;
   reset = false;
