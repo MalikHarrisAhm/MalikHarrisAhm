@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />  
+    <title>The Baobab</title>
+  
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"> 
+    <link rel="stylesheet" type="text/css" href="abstract.css" />
+     
+    <script>
+      // Generates a random hash and token id each time you reload, in the following format
+      //let tokenData = {"hash":"0xd9134c11cd5ed9798ea0811364d63bd850c69c5d13383c9983ade39847e9ea86","tokenId":"99000000"};
+      
+      function genTokenData(projectNum)
+      {
+          let data = {};
+          let hash = "0x";
+          for (var i = 0; i < 64; i++)
+          {
+              hash += Math.floor(Math.random() * 16).toString(16);
+          }
+          data.hash = hash;
+          data.tokenId = (projectNum * 1000000 + Math.floor(Math.random() * 1000)).toString();
+          return data;
+      }
+      let tokenData = genTokenData(99);
+
+    
+    </script>
+    <script src="three.min.js"></script>
+    <script src="p5.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+  </head>
+  <body>
+    <div class="wrapper hidden-mobile3">
+        
+      <div class="sidebar">
+        <a style="font-size: 25px; font-weight:900; padding-left:  20px; text-decoration: none; text-orientation: sideways-right; color: black "href="index.html" id="titleB">THE BAOBAB</a> 
+          <a style="font-size: 12px;  font-weight:900;  text-decoration:underline;  padding-left: 10px; color: black" href="abstract.html" id="titleD">ABSTRACT</a>   
+            <a style="font-size: 10px; font-weight:100; text-decoration: none; color: black"  href="#introduction"id="titleD"><del>INTRODUCTION</del></a>     
+            <a style="font-size: 10px; font-weight:100; text-decoration: none; color: black"  href="#methods"id="titleD"><del>METHODS</del></a>     
+            <a style="font-size: 12px; font-weight:300; text-decoration: none;color: black" href="#results"id="titleD">RESULTS</a>     
+            <a style="font-size: 10px; font-weight:100; text-decoration: none;color: black"  href="#discussion"id="titleD"><del>DISCUSSION</del></a>     
+            <a style="font-size: 12px;font-weight:300; text-decoration: none;color: black" href="#artist"id="titleD">THE ARTIST</a>      
+            <a style="font-size: 10px;font-weight:100; text-decoration: none;color: black"  href="#video"id="titleD"><del>VIDEO ESSAY</del></a>      
+
+  </div>
+</div>
+     <!-- Portfolio Grid-->
+     <section class="page-section" id="portfolio" >
+
+
+
+
+
+      <div class="" style="padding-top: 14%;">
+        <!-- <div class="text-right"> -->
+          <!-- <h2 class="" style="font-size: 20px; font-weight:500;">ABSTRACT</h2> -->
+          <!-- <h3 class="" style="font-size: 14px; font-weight:300; padding-bottom: 40px;  padding-right: 40px; padding-left: 40px">IT HAS BEEN WHILST CARRYING OUT HEALTH RESEARCH IN MADAGASCAR, AFRICA, FOR MY NON-PROFIT, OPENPIL, THAT I BECAME INSPIRED BY THE FASCINATING HISTORY AND DOOMED FUTURE OF AFRICA'S "TREES OF LIFE", THE INDIGENOUS BAOBABS. THIS MONOCHROME GENERATIVE ART COLLECTION, 'THE BAOBAB', TELLS A DYSTOPIAN STORY THROUGH MEANINGFUL AND INTENTIONAL SYMBOLISM, PROVIDING A UNIQUE COMMENTARY ON NATURE, DEATH, CONTROL, KNOWLEDGE AND TIME.</h3>
+      </div> -->
+          <div class="text-right">
+              <!-- <h2 class="" style="font-size: 20px; font-weight:500;">ABSTRACT</h2> -->
+              <!-- [BAOBABS HAVE NO RINGS, ALSO KNOWN AS 'TREE OF LIFE']. [PARALELS ARE DRAWN THROUGHOUT THE COLLECTION]. [MONOCHROME TO REFLECT THE DYSTOPIA OF THE PIECE]. [TALK ABOUT PICTURES I TOOK, INSPIRED THE AESTHETIC OF THE ELEMENTS].  -->
+              <h3 class="" style="font-size: 14px; font-weight:500; padding-bottom: 40px;  padding-right: 40px;  padding-left: 40px">THE BAOBAB IS COMPRISED OF SIX ELEMENTS, EACH OF WHICH SYMBOLICALLY GESTURES TO THE MAIN THEMES OF THE COLLECTION:  NATURE, DEATH, CONTROL, KNOWLEDGE AND TIME.</h3>
+          </div>
+          <div class="row" >
+              <div class="col-lg-4 col-sm-6 mb-4">
+                  <!-- Portfolio item 1-->
+                  <div class="portfolio-item">
+                      <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+                          <div class="portfolio-">
+                              <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                          </div>
+                          <img  class="img-fluid" style="padding:70px" src="img/BORDER2.jpg" alt="..." />
+                      </a>
+                  </div>
+              </div>
+              <div class="portfolio-caption" style="padding:20px">
+                <div class="" style="font-size: 14px; font-weight:500;">CONSTRAINED BORDER:</div>
+                <div class="" style="font-size: 14px; font-weight:200;">MAN'S CONTROL OVER NATURE.</div>
+              </div>
+              <div class="col-lg-4 col-sm-6 mb-4" >
+                  <!-- Portfolio item 2-->
+                  <div class="portfolio-item">
+                      <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
+                          <div class="portfolio-hover">
+                              <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                          </div>
+                          <img  class="img-fluid" style="padding:70px" src="img/NOBORDER2.jpg" alt="..." />
+                      </a>
+                      
+              <div class="portfolio-caption" style="padding:20px">
+                <div class="" style="font-size: 14px; font-weight:500;">UNCONSTRAINED BORDER:</div>
+                <div class="" style="font-size: 14px; font-weight:200;" >NATURE'S CONTROL OVER MAN.</div>
+            </div>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-sm-6 mb-4">
+                  <!-- Portfolio item 3-->
+                  <div class="portfolio-item">
+                      <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
+                          <div class="portfolio-hover">
+                              <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                          </div>
+                          <img class="img-fluid" style="padding:70px"src="img/WHITESPACE2.jpg" alt="..." />
+                      </a>
+                      
+              <div class="portfolio-caption" style="padding:20px">
+                <div class="" style="font-size: 14px; font-weight:500;">WHITE PATCHES:</div>
+                <div class="" style="font-size: 14px; font-weight:200;">TIME AND DECAY.</div>
+            </div>
+                  </div>
+                  
+              </div>
+              
+              <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+                  <!-- Portfolio item 4-->
+                  <div class="portfolio-item">
+                      <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
+                          <div class="portfolio-hover">
+                              <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                          </div>
+                          <img  class="img-fluid"style="padding:70px" src="img/UNIFORM2.jpg" alt="..." />
+                      </a>
+                      
+              <div class="portfolio-caption" style="padding:20px">
+                <div class="" style="font-size: 14px; font-weight:500;">UNIFORM CURVES:</div>
+                <div class="" style="font-size: 14px; font-weight:200;">KNOWLEDGE AND UNDERSTANDING.</div>
+            </div>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
+                  <!-- Portfolio item 5-->
+                  <div class="portfolio-item">
+                      <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">
+                          <div class="portfolio-hover">
+                              <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                          </div>
+                          <img  class="img-fluid"style="padding:70px" src="img/CURVES2.jpg" alt="..." />
+                      </a>
+                    
+              <div class="portfolio-caption" style="padding:20px">
+                <div class="" style="font-size: 14px; font-weight:500;">NONUNIFORM CURVES:</div>
+                <div class="" style="font-size: 14px; font-weight:200;">CONFUSION AND MISUNDERSTANDING.</div>
+            </div>
+                  </div>
+              </div>
+                
+              <div class="col-lg-4 col-sm-6">
+                  <!-- Portfolio item 6-->
+                  <div class="portfolio-item">
+                      <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal6">
+                          <div class="portfolio-hover">
+                              <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                          </div>
+                          <img  class="img-fluid"style="padding:70px" src="IMG/CIRCLE4.jpg" alt="..." />
+                      </a>
+                  </div>
+              </div>
+
+              <div class="portfolio-caption" style="padding:20px">
+                <div class="" style="font-size: 14px; font-weight:500;">MAGNIFYING LENS:</div>
+                <div class="" style="font-size: 14px; font-weight:200;">MAN'S EFFORTS TO RESEARCH AND LEARN.</div>
+            </div>
+
+          </div>
+
+          <div class="text-right" style="padding: 30px">
+            <h3 class="" style="font-size: 14px; font-weight:300; padding-bottom: 40px;  padding-right: 40px; padding-left: 40px">THREE COMPOSITIONS, TITLED 'POWER', 'DISCOVERY' AND 'DECAY',  ARE GENERATED THROUGH A SPECIFIC SELECTION AND SEQUENCE OF THE ABOVE SIX ELEMENTS, PROGRAMMATICALLY INTERWOVEN TOGETHER THROUGH ADVANCED TRIGONOMETRIC GRAPHING TECHNIQUES. FOR EXAMPLE, THE COMPOSITION 'POWER' IS GENERATED WITH ELEMENTS: B, A, C AND D. THE SELECTION OF ELEMENTS FOR EACH COMPOSITION IS INTENTIONAL, IN ORDER TO TELL A STORY.</h3>
+        </div>
+
+        <div class="text-right" style="padding: 20px">
+          <h3 class="" style="font-size: 14px; font-weight:300; padding-bottom: 40px;  padding-right: 40px; padding-left: 40px">THESE STORIES ARE DESCRIBED BELOW.</h3>
+      </div>
+
+      <div class="text-left" style="padding: 20px">
+        <h3 class="" style="font-size: 20px; font-weight:700;   padding-left: 20px">POWER.</h3>
+    </div>
+
+
+      <div class="row" >
+        <div class="col-lg-4 col-sm-6 mb-4">
+            <!-- Portfolio item 1-->
+            <div class="portfolio-item">
+                <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+                    <div class="portfolio-">
+                        <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                    </div>
+                    <img  class="img-fluid" src="img/POWER1.jpg" alt="..." />
+
+                
+                    <div class="portfolio-caption" style="padding:20px">
+                      <div class="" style="font-size: 14px; font-weight:200; text-decoration: none; color:black" >THE BAOBAB #0.1</div>
+                  </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-sm-6 mb-4">
+          <!-- Portfolio item 1-->
+          <div class="portfolio-item">
+              <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+                  <div class="portfolio-">
+                      <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                  </div>
+                  <img  class="img-fluid" src="img/POWER2.jpg" alt="..." />
+
+              
+                  <div class="portfolio-caption" style="padding:20px">
+                    <div class="" style="font-size: 14px; font-weight:200; text-decoration: none; color:black" >THE BAOBAB #0.1</div>
+                </div>
+              </a>
+          </div>
+      </div>
+
+
+
+
+      <div class="col-lg-4 col-sm-6 mb-4">
+        <!-- Portfolio item 1-->
+        <div class="portfolio-item">
+            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+                <div class="portfolio-">
+                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                </div>
+                <img  class="img-fluid" src="img/POWER3.jpg" alt="..." />
+
+            
+                <div class="portfolio-caption" style="padding:20px">
+                  <div class="" style="font-size: 14px; font-weight:200; text-decoration: none; color:black" >THE BAOBAB #0.1</div>
+              </div>
+            </a>
+        </div>
+    </div>
+    </div>
+
+
+    <div class="text-left" >
+      <h3 class="" style="font-size: 14px; font-weight:300; padding-bottom: 40px;  padding-right: 40px; padding-left: 40px">THREE COMPOSITIONS, TITLED 'POWER', 'DISCOVERY' AND 'DECAY',  ARE GENERATED THROUGH A SPECIFIC SEQUENCE OF THE ABOVE SIX ELEMENTS, PROGRAMMATICALLY INTERWOVEN TOGETHER THROUGH ADVANCED TRIGONOMETRIC GRAPHING TECHNIQUES. FOR EXAMPLE, THE COMPOSITION 'POWER' IS GENERATED WITH ELEMENTS: B, A, C AND D. THE SELECTION OF ELEMENTS FOR EACH COMPOSITION IS INTENTIONAL, IN ORDER TO TELL A </h3>
+    </div>
+    <div class="text-left" style="padding: 20px">
+      <h3 class="" style="font-size: 20px; font-weight:700;   padding-left: 20px">DISCOVERY.</h3>
+  </div>
+
+    <div class="row" >
+      <div class="col-lg-4 col-sm-6 mb-4">
+          <!-- Portfolio item 1-->
+          <div class="portfolio-item">
+              <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+                  <div class="portfolio-">
+                      <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                  </div>
+                  <img  class="img-fluid" src="img/DISCOVERY1.jpg" alt="..." />
+
+              
+                  <div class="portfolio-caption" style="padding:20px">
+                    <div class="" style="font-size: 14px; font-weight:200; text-decoration: none; color:black" >THE BAOBAB #0.1</div>
+                </div>
+              </a>
+          </div>
+      </div>
+
+      <div class="col-lg-4 col-sm-6 mb-4">
+        <!-- Portfolio item 1-->
+        <div class="portfolio-item">
+            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+                <div class="portfolio-">
+                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                </div>
+                <img  class="img-fluid" src="img/DISCOVERY2.jpg" alt="..." />
+
+            
+                <div class="portfolio-caption" style="padding:20px">
+                  <div class="" style="font-size: 14px; font-weight:200; text-decoration: none; color:black" >THE BAOBAB #0.1</div>
+              </div>
+            </a>
+        </div>
+    </div>
+
+
+
+
+    <div class="col-lg-4 col-sm-6 mb-4">
+      <!-- Portfolio item 1-->
+      <div class="portfolio-item">
+          <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+              <div class="portfolio-">
+                  <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+              </div>
+              <img  class="img-fluid" src="img/DISCOVERY3.jpg" alt="..." />
+
+          
+              <div class="portfolio-caption" style="padding:20px">
+                <div class="" style="font-size: 14px; font-weight:200; text-decoration: none; color:black" >THE BAOBAB #0.1</div>
+            </div>
+          </a>
+      </div>
+  </div>
+
+
+  <div class="text-left" >
+    <h3 class="" style="font-size: 14px; font-weight:300; padding-bottom: 40px;  padding-right: 40px; padding-left: 40px">THREE COMPOSITIONS, TITLED 'POWER', 'DISCOVERY' AND 'DECAY',  ARE GENERATED THROUGH A SPECIFIC SEQUENCE OF THE ABOVE SIX ELEMENTS, PROGRAMMATICALLY INTERWOVEN TOGETHER THROUGH ADVANCED TRIGONOMETRIC GRAPHING TECHNIQUES. FOR EXAMPLE, THE COMPOSITION 'POWER' IS GENERATED WITH ELEMENTS: B, A, C AND D. THE SELECTION OF ELEMENTS FOR EACH COMPOSITION IS INTENTIONAL, IN ORDER TO TELL A </h3>
+  </div>
+  <div class="text-left" style="padding: 20px">
+    <h3 class="" style="font-size: 20px; font-weight:700;   padding-left: 20px">DECAY.</h3>
+</div>
+
+
+  </div>
+  <div class="row" >
+    <div class="col-lg-4 col-sm-6 mb-4">
+        <!-- Portfolio item 1-->
+        <div class="portfolio-item">
+            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+                <div class="portfolio-">
+                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                </div>
+                <img  class="img-fluid" src="img/DECAY1.jpg" alt="..." />
+
+            
+                <div class="portfolio-caption" style="padding:20px">
+                  <div class="" style="font-size: 14px; font-weight:200; text-decoration: none; color:black" >THE BAOBAB #0.1</div>
+              </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-sm-6 mb-4">
+      <!-- Portfolio item 1-->
+      <div class="portfolio-item">
+          <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+              <div class="portfolio-">
+                  <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+              </div>
+              <img  class="img-fluid" src="img/DECAY2.jpg" alt="..." />
+
+          
+              <div class="portfolio-caption" style="padding:20px">
+                <div class="" style="font-size: 14px; font-weight:200;text-decoration: none; color:black" >THE BAOBAB #0.1</div>
+            </div>
+          </a>
+      </div>
+  </div>
+
+
+
+
+  <div class="col-lg-4 col-sm-6 mb-4">
+    <!-- Portfolio item 1-->
+    <div class="portfolio-item">
+        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+            <div class="portfolio-">
+                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+            </div>
+            <img  class="img-fluid" src="img/DECAY3.jpg" alt="..." />
+
+        
+            <div class="portfolio-caption" style="padding:20px">
+              <div class="" style="font-size: 14px; font-weight:200; text-decoration: none; color:black" >THE BAOBAB #0.1</div>
+          </div>
+        </a>
+    </div>
+</div>
+
+<div class="text-left" >
+  <h3 class="" style="font-size: 14px; font-weight:300; padding-bottom: 40px;  padding-right: 40px; padding-left: 40px">THREE COMPOSITIONS, TITLED 'POWER', 'DISCOVERY' AND 'DECAY',  ARE GENERATED THROUGH A SPECIFIC SEQUENCE OF THE ABOVE SIX ELEMENTS, PROGRAMMATICALLY INTERWOVEN TOGETHER THROUGH ADVANCED TRIGONOMETRIC GRAPHING TECHNIQUES. FOR EXAMPLE, THE COMPOSITION 'POWER' IS GENERATED WITH ELEMENTS: B, A, C AND D. THE SELECTION OF ELEMENTS FOR EACH COMPOSITION IS INTENTIONAL, IN ORDER TO TELL A </h3>
+</div>
+
+
+    </div>
+
+
+
+      </div>
+  </section>
+
+  </body>
+</html>
