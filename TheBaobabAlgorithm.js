@@ -1,5 +1,6 @@
 // TheBaobab Algorithm, by Malik Harris Ahmed © 2022
 function setup() {
+  compNum = 1
   valaueue = 0;
   reset = false;
   density = 0.2;
@@ -7,6 +8,7 @@ function setup() {
   resetSketch();
 }
 function touched() {
+  compNum++;
   valaueue = 0;
   loop();
   reset = true;
@@ -17,7 +19,6 @@ function touched() {
 function resetSketch() {
   loop();
   if (reset) {
-    let compNum = random(3)
     if(compNum <= 1) {
       noiseDetail(4, 0.5); 
       composition = "POWER";
@@ -27,6 +28,7 @@ function resetSketch() {
     } else if (compNum <= 3 && compNum > 2) {
       noiseDetail(1, 0.5); //NEEDS TO BE (1,0) OR (0,0) FOR "DISCOVERY"
       composition = "DISCOVERY";
+      compNum = 0;
     }
   } else {
     composition = "POWER";
@@ -170,6 +172,7 @@ function draw() {
 
 function keyPressed() {
   if ((keyIsPressed == true) && ((key == 'D') || (key == 'd'))) {
+    compNum++;
     valaueue = 0;
     loop();
     reset = true;
