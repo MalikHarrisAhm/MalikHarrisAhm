@@ -27,7 +27,9 @@
 
 
 .container {
-  font-size: 0; /*remove white space*/
+  font-size: 0; 
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .section {
@@ -38,8 +40,7 @@
   /* border: 1px solid; */
   box-sizing: border-box;
   padding-bottom: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
+  
 
 }
 
@@ -54,6 +55,12 @@
 
 @media (max-width: 100vh) {
   #topPadding {
-    padding-top: 20%;
+    padding-top: 20% ;
+  }
+}
+
+@media (max-width: 100vh) {
+  #anotherTop {
+    padding-top: 20px;
   }
 }
