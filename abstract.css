@@ -23,16 +23,28 @@
     padding-top: 40%;
   }
 }
-.column {
-  float: left;
-  width: 50%;
 
+
+
+.container {
+  font-size: 0; /*remove white space*/
 }
 
-.row:after {
-  content: "";
-  display: table;
-  clear:both;
+.section {
+  font-size: 16px; /*reset font size*/
+  display: inline-block;
+  vertical-align: top;
+  width: 33.3333%;
+  /* border: 1px solid; */
+  box-sizing: border-box;
+  padding-bottom: 20px;
+}
+
+@media (max-width: 768px) { /*breakpoint*/
+  .section {
+    display: block;
+    width: auto;
+  }
 }
 
 
