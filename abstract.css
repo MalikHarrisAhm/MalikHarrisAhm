@@ -11,12 +11,30 @@
 #topPadding {
   padding-top: 10%;
 }
+#topPadding2 {
+  padding-top: 20%;
+}
 
 @media (max-width: 133vh) {
   #topPadding {
     padding-top: 20%;
   }
+  #topPadding2 {
+    padding-top: 40%;
+  }
 }
+.column {
+  float: left;
+  width: 50%;
+
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear:both;
+}
+
 
 
 @media (max-width: 100vh) {
