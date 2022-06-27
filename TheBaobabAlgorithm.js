@@ -19,13 +19,13 @@ function touched() {
 function resetSketch() {
   loop();
   if (reset) {
-    if(compNum <= 2) {
+    if(compNum <= 1) {
       noiseDetail(4, 0.5); 
       composition = "POWER";
-    } else if (compNum <= 4 && compNum > 2) {
+    } else if (compNum <= 2 && compNum > 1) {
       noiseDetail(4, 0.5); 
       composition = "DECAY";
-    } else if (compNum <= 6 && compNum > 4) {
+    } else if (compNum <= 3 && compNum > 2) {
       noiseDetail(1, 0.5); //NEEDS TO BE (1,0) OR (0,0) FOR "DISCOVERY"
       composition = "DISCOVERY";
       compNum = 0;
@@ -122,10 +122,10 @@ function drawOutput(num, particles, colorCode) {
             p.y += sin(a2-HALF_PI);
           } 
         } else {
-          fill(0, 30);
           p.add(f(p.x/noiseScale, p.y/noiseScale));
           p.x += cos(a2-HALF_PI);
           p.y += sin(a2-HALF_PI);
+          
           point(p.x, p.y);
         }
       }
@@ -146,6 +146,7 @@ function drawOutput(num, particles, colorCode) {
         p.y += tan(a);
     }
     // ellipse(p.x, p.y, 1, 1); //change from grainy to smooth texture, must disable "point(p.x, p.y)"
+    
     point(p.x, p.y);
   }
 }
