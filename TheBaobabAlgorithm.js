@@ -19,13 +19,13 @@ function touched() {
 function resetSketch() {
   loop();
   if (reset) {
-    if(compNum <= 1) {
+    if(compNum <= 2) {
       noiseDetail(4, 0.5); 
       composition = "POWER";
-    } else if (compNum <= 2 && compNum > 1) {
+    } else if (compNum <= 4 && compNum > 2) {
       noiseDetail(4, 0.5); 
       composition = "DECAY";
-    } else if (compNum <= 3 && compNum > 2) {
+    } else if (compNum <= 6 && compNum > 4) {
       noiseDetail(1, 0.5); //NEEDS TO BE (1,0) OR (0,0) FOR "DISCOVERY"
       composition = "DISCOVERY";
       compNum = 0;
