@@ -122,6 +122,7 @@ function drawOutput(num, particles, colorCode) {
             p.y += sin(a2-HALF_PI);
           } 
         } else {
+          fill(0, 30);
           p.add(f(p.x/noiseScale, p.y/noiseScale));
           p.x += cos(a2-HALF_PI);
           p.y += sin(a2-HALF_PI);
